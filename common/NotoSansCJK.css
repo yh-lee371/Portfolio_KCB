@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Noto Sans CJK;
+  src: url(../fonts/notokr-demilight.eot);
+  src: local(※), url("../font/notokr-demilight.woff2") format("woff2"),
+    url("../font/notokr-demilight.woff") format("woff"),
+    url("../font/notokr-demilight.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Noto Sans CJK;
+  src: url(../font/notokr-regular.eot);
+  src: local(※), url("../font/notokr-regular.woff2") format("woff2"),
+    url("../font/notokr-regular.woff") format("woff"),
+    url("../font/notokr-regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Noto Sans CJK;
+  src: url(../font/notokr-bold.eot);
+  src: local(※), url("../font/notokr-bold.woff2") format("woff2"),
+    url("../font/notokr-bold.woff") format("woff"),
+    url("../font/notokr-bold.ttf") format("truetype");
+  font-weight: 600;
+}
