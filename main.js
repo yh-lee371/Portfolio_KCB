@@ -12,7 +12,6 @@ $(document).ready(function(){
       $('.lnb').stop().slideUp();
     });
 
-
     $('.gnb__list__item').hover(function(){
       $(this).css('color','#e63d21');
     }, function(){
@@ -36,4 +35,25 @@ $(document).ready(function(){
     $('.cancle').click(function(){
       $('.search__box').slideUp();
     })
+
+  // let ht = $(window).height();
+  // $('section').height(ht);
+
+  // snb 활성화
+  //  $(window).on('resize', function(){
+  //    let ht = $(window).height();
+  //    $('section').height(ht);
+  //  });
+
+  $(window).on('scroll', function(){ // 브라우저에서 스크롤 할 때
+    let ht = $(window).height();
+    let scroll_t = $(window).scrollTop();
+
+    for(let k = 0 ; k < 6 ; k++) { // 첫번째 박스부터 네번째 박스의 값만큼 반복
+      if(scroll_t >= ht*k && scroll_t < ht*(k+1)) {
+        $('#snb li a').removeClass('active');
+        $('#snb li').eq(k).find('a').addClass('active');
+      }
+    }
+  });
 });
