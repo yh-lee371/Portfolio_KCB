@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="16.924" height="12.728" viewBox="0 0 16.924 12.728">
   <g id="그룹_38" data-name="그룹 38" transform="translate(16.424 6.417) rotate(135)">
-    <line id="선_2" data-name="선 2" x2="8" transform="translate(3.076 11.151)" fill="none" stroke="#606060" stroke-linecap="round" stroke-width="1"/>
-    <line id="선_3" data-name="선 3" y2="8" transform="translate(11.076 3.151)" fill="none" stroke="#606060" stroke-linecap="round" stroke-width="1"/>
-    <line id="선_15" data-name="선 15" x2="15" transform="rotate(45)" fill="none" stroke="#606060" stroke-linecap="round" stroke-width="1"/>
+    <line id="선_2" data-name="선 2" x2="8" transform="translate(3.076 11.151)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+    <line id="선_3" data-name="선 3" y2="8" transform="translate(11.076 3.151)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+    <line id="선_15" data-name="선 15" x2="15" transform="rotate(45)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
   </g>
 </svg>
