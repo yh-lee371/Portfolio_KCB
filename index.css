@@ -134,10 +134,10 @@ section ~ section {
   background: url(images/bg/bg_section01.png) no-repeat 50% 50% / cover;
 }
 .splide__list .slide2 {
-  background: url(images/bg/bg_section02.jpg) no-repeat 50% 50% / cover;
+  background: url(images/bg/bg_section02.png) no-repeat 50% 50% / cover;
 }
 .splide__list .slide3 {
-  background: url(images/bg/bg_section03.jpg) no-repeat 50% 50% / cover;
+  background: url(images/bg/bg_section03.png) no-repeat 50% 50% / cover;
 }
 
 .splide__list .splide__slide .info {
