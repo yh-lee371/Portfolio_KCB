@@ -136,12 +136,30 @@
 .splide__arrow--prev {
   left: 1em;
 }
+.splide__arrow--prev:after {
+  content: "";
+  width: 16px;
+  height: 12px;
+  display: block;
+  background: url(../images/icon/prev_btn.svg) no-repeat 50% 50% / cover;
+  margin-left: 10px;
+}
 .splide__arrow--prev svg {
   transform: scaleX(-1);
 }
 .splide__arrow--next {
   right: 1em;
 }
+
+.splide__arrow--next:after {
+  content: "";
+  width: 16px;
+  height: 12px;
+  display: block;
+  background: url(../images/icon/next_btn.svg) no-repeat 50% 50% / cover;
+  margin-left: 10px;
+}
+
 .splide__pagination {
   position: absolute;
   z-index: 1;

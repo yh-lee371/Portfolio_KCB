@@ -4,6 +4,17 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
+  // gsap 이벤트
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: 'section',
+      start:'top top'
+    }
+  });
+
+  tl.from('.sc-1', {y:100, opacity:0, duration:1})
+    .from('.sc-2', {y:100, opacity:0, duration:1.5,})
+
   // 소메뉴 활성화
   $('.lnb').hide();
   $('.gnb').hover(function(){
@@ -27,6 +38,26 @@ $(document).ready(function(){
       $(this).css('color','#000');
     }
   }); 
+
+  $(window).resize(function(){
+    var wt = $(window).width();
+    if(wt < 740 && $('.lnb').is(':hidden')) {//740이상이고 내비가 화면에서 감춰지면
+      $('.lnb').removeAttr('style');//모바일 스타일(css) 제거
+    }
+  });
+
+  // up btn
+  $( window ).scroll( function() {
+    if ( $( this ).scrollTop() > 200 ) {
+      $( '.moveup-btn' ).fadeIn();
+    } else {
+      $( '.moveup-btn' ).fadeOut();
+    }
+  } );
+  $( '.moveup-btn' ).click( function() {
+    $( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+    return false;
+  } );
 
   // 메뉴버튼 활성화
   $('.navbar__toggle-btn').click(function(){
@@ -54,28 +85,11 @@ $(document).ready(function(){
   })
 
   // home slider
-  /*   $(".splide__list > li:gt(0)").hide();
-  setInterval(function() { 
-  $('.splide__list > li:first')
-  .fadeOut(1500)
-  .next()
-  .fadeIn(1500)
-  .end()
-  .appendTo('.splide__list');
-  }, 4000); */
-
-
   new Splide( '.splide', {
     type    : 'loop',
     perPage : 1,
     autoplay: true,
   } ).mount();
-
-  // var splide = new Splide( '.splide' );
-  // splide.on( 'autoplay:playing', function ( rate ) {
-  // 	console.log( rate ); // 0-1
-  // } );
-  // splide.mount(); 
 
   //snb 활성화
   $(window).on('scroll', function(){ 
@@ -90,7 +104,8 @@ $(document).ready(function(){
     
     if(scroll_t >= sec1 && scroll_t < sec2 ) {
       $('.snb li a').removeClass('active');
-      $('.snb li').eq(0).find('a').addClass('active');
+      $('.snb li').eq(0).find('a').addClass('active'); 
+
     }
     if(scroll_t >= sec2 && scroll_t < sec3 ) {
       $('.snb li a').removeClass('active');
@@ -112,7 +127,7 @@ $(document).ready(function(){
       $('.snb li a').removeClass('active');
       $('.snb li').eq(5).find('a').addClass('active');
     }
-    
+
   /* 
     let ht = $(window).height();
     let scroll_t = $(window).scrollTop();
@@ -132,14 +147,19 @@ $(document).ready(function(){
     pagination: {
       el: '.swiper-pagination',
     },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    breakpoints: {
+      740: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      }
+    }
   });
-
-
 
   // 패밀리 사이트 활성화
   $('.family-site').click(function(){
     $(this).toggleClass('active');
   })
-
 
 });

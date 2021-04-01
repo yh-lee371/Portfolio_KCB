@@ -36,14 +36,14 @@ section ~ section {
 
 .moreview__btn i:after {
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   top: 50%;
   right: 20px;
   transition: 0.3s;
   transform: translateY(-50%);
-  background: url(images/icon/more_btn1.svg);
+  background: url(images/icon/more_btn1.svg) no-repeat center center;
 }
 
 .moreview__btn:hover {
@@ -52,7 +52,7 @@ section ~ section {
   color: #fff;
 }
 .moreview__btn:hover i:after {
-  background: url(images/icon/more_btn2.svg);
+  background: url(images/icon/more_btn2.svg) no-repeat center center;
 }
 /*---------------------------------------------------------------------------------------------------------------------
     snb
@@ -134,10 +134,10 @@ section ~ section {
   background: url(images/bg/bg_section01.png) no-repeat 50% 50% / cover;
 }
 .splide__list .slide2 {
-  background: url(images/bg/bg_section02.jpg) no-repeat 0% 0% / cover;
+  background: url(images/bg/bg_section02.jpg) no-repeat 50% 50% / cover;
 }
 .splide__list .slide3 {
-  background: url(images/bg/bg_section03.jpg) no-repeat 0% 0% / cover;
+  background: url(images/bg/bg_section03.jpg) no-repeat 50% 50% / cover;
 }
 
 .splide__list .splide__slide .info {
@@ -262,7 +262,7 @@ section ~ section {
     service
 ---------------------------------------------------------------------------------------------------------------------*/
 #service {
-  background: url(images/bg/bg_section04.png) fixed 100% 100% / cover;
+  background: url(images/bg/bg_section04.png) fixed 50% 50% / cover;
   color: #f6f6f6;
 }
 
@@ -317,7 +317,7 @@ section ~ section {
 }
 
 #service .moreview__btn i:after {
-  background: url(images/icon/more_btn2.svg) no-repeat;
+  background: url(images/icon/more_btn2.svg) no-repeat 50% 50%;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------
@@ -334,7 +334,7 @@ section ~ section {
   border-color: #f6f6f6;
 }
 #recruit .moreview__btn i:after {
-  background: url(images/icon/more_btn2.svg) no-repeat;
+  background: url(images/icon/more_btn2.svg) no-repeat 50% 50%;
 }
 #recruit .wrap {
   position: relative;
@@ -345,14 +345,9 @@ section ~ section {
   position: relative;
   bottom: 224px;
   z-index: -1;
-  width: 100%;
-  height: 520px;
+  height: 100%;
   border-radius: 0px 60px;
   background: url(images/bg/bg_section05.png) no-repeat 50% 50% / cover;
-}
-
-.recruit__img img {
-  width: 100%;
 }
 
 /*---------------------------------------------------------------------------------------------------------------------
@@ -367,20 +362,20 @@ section ~ section {
 }
 .notice,
 .news {
-  width: 45%;
+  width: 90%;
   max-width: 598px;
   vertical-align: top;
   position: relative;
 }
-.notice {
+/* .notice {
   float: left;
 }
 .news {
   float: right;
-}
+} */
 #notice i {
   position: absolute;
-  top: 14px;
+  top: 2px;
   right: 0;
   width: 36px;
   height: 36px;
@@ -405,7 +400,7 @@ section ~ section {
   background: #e63d21;
 }
 #notice i:hover:after {
-  background: url(images/icon/more_btn2.svg) no-repeat;
+  background: url(images/icon/more_btn2.svg) no-repeat 50% 50%;
 }
 .notice__list {
   border-top: 2px solid #606060;
@@ -413,6 +408,7 @@ section ~ section {
 .notice__list .notice__list__item {
   padding: 10px 0;
   border-bottom: 1px solid #e7e6e1;
+  cursor: pointer;
 }
 .notice__list .notice__list__item .title {
   padding-bottom: 8px;
@@ -430,6 +426,9 @@ section ~ section {
   color: #606060;
 }
 
+.swiper-pagination {
+  display: none;
+}
 /*---------------------------------------------------------------------------------------------------------------------
     media query
 ---------------------------------------------------------------------------------------------------------------------*/
@@ -455,9 +454,6 @@ section ~ section {
   /* recruit */
   #recruit {
     height: 550px;
-  }
-  .recruit__img {
-    height: 400px;
   }
 }
 
@@ -516,9 +512,32 @@ section ~ section {
     display: none;
   }
 
+  .moveup-btn {
+    width:36px;
+    height:36px;
+    border-radius: 50%;
+    background-color: #e7e6e1;
+    position: fixed;
+    bottom:30px;
+    right:20px;
+    z-index: 999;
+  }
+
+  .moveup-btn a {
+    width:14px;
+    height:14px;
+    display: block;
+    border:2px solid;
+    border-color: #000 #000 transparent transparent;
+    position: relative;
+    top:50%; left: 50%;
+    transform: translate(-50%, -25%) rotate(-45deg);
+  }
+
   /* home */
   .splide__track {
     height: 446px;
+    margin-top: 80px;
   }
 
   .splide__list .splide__slide .info,
@@ -542,21 +561,17 @@ section ~ section {
   /* vision */
   .vision__list {
     margin-top: 50px;
-    text-align: left;
   }
 
   .vision__list__item {
     display: list-item;
     padding-left: 20px;
     width: 100%;
-    overflow: hidden;
     margin-bottom: 30px;
     position: relative;
   }
 
   .vision__list__item figure {
-    margin: 0 20px 0 0;
-    float: left;
     width: 78px;
     height: 78px;
   }
@@ -565,11 +580,8 @@ section ~ section {
     width: 60%;
   }
 
-  .vision__list__item p {
-    margin-left: 98px;
-  }
   .vision__list__item .title {
-    margin: 0 0 12px;
+    margin: 20px 0 8px;
     font-size: 18px;
   }
   .vision__list__item p span {
@@ -623,9 +635,7 @@ section ~ section {
     display: block;
   }
   .recruit__img {
-    width: 100%;
     border-radius: 0;
-    height: 330px;
     bottom: 184px;
   }
 
@@ -644,4 +654,7 @@ section ~ section {
   #notice i {
     top: -10px;
   }
+
+  .swiper-pagination {
+    display: block
 }

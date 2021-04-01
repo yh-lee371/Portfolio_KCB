@@ -21,15 +21,17 @@
   <link rel="stylesheet" href="index.css">
 
   <!-- js -->
-  <script src="common/jquery-3.5.1.min.js"></script>
-  <script src="common/swiper-bundle.min.js"></script>
-  <script src="common/gsap.min.js"></script>
-  <script src="common/splide.min.js"></script>
-  <script src="main.js"></script>
+  <script defer src="common/jquery-3.5.1.min.js"></script>
+  <script defer src="common/swiper-bundle.min.js"></script>
+  <script defer src="common/gsap.min.js"></script>
+  <script defer src="common/ScrollTrigger.js"></script>
+  <script defer src="common/splide.min.js"></script>
+  <script defer src="main.js"></script>
 
 </head>
 
 <body>
+  <!-- header -->
   <header id="header">
     <h1 class="logo">
       <a href="index.html">KCB</a>
@@ -96,6 +98,8 @@
       <span></span>
     </button>
   </header>
+
+  <!-- main -->
   <main>
     <section id="home">
       <div class="splide">
@@ -129,14 +133,14 @@
     </section>
     <section id="about">
       <div class="wrap">
-        <div class="description">
+        <div class="description sc-1">
           <h3>
             <span class="small">회사소개</span>
             KCB(Korea Credit Bureau)는
           </h3>
           <p>금융위기의 재발을 막고, 우리나라 금융산업을 튼튼하게 만들기 위해 국내 금융회사들이 모여<br>서로의 신용정보를 공유하자는 뜻을 모은 신용평가회사 입니다.</p>
         </div>
-        <div class="content">
+        <div class="content sc-2">
           <img src="images/content/content01.png" alt="content01">
         </div>
         <div class="moreview__btn">
@@ -147,15 +151,15 @@
     </section>
     <section id="vision">
       <div class="wrap">
-        <div class="description">
+        <div class="description sc-1">
           <h3>
             <span class="small">Vision</span>
             Beyond CB for the Best Practice CB
           </h3>
-          <p>KCB는 수익이나 규모에 치중해 앞만 보고 질주하기 보다는 모범적인 과정 하나 하나를 거쳐 제대로 된 CB(Credit Bureau를<br>만듦으로써 국내외 CB사들의 벤치마킹 1순위가 되는
+          <p>KCB는 수익이나 규모에 치중해 앞만 보고 질주하기 보다는 모범적인 과정 하나 하나를 거쳐 제대로 된 CB(Credit Bureau를 <br>만듦으로써 국내외 CB사들의 벤치마킹 1순위가 되는
             모범 CB, 'the Best Practice CB'를 지향합니다.</p>
         </div>
-        <ul class="vision__list">
+        <ul class="vision__list sc-2">
           <li class="vision__list__item">
             <figure><img src="images/icon/handshake.svg" alt="handshake"></figure>
             <p class="title">신용생활의 동반자</p>
@@ -181,14 +185,14 @@
     </section>
     <section id="academy">
       <div class="wrap">
-        <div class="description">
+        <div class="description sc-1">
           <h3>
             <span class="small">신용교육</span>
             KCB 아카데미는
           </h3>
           <p>가계 신용 데이터 및 분석 능력을 바탕으로 최신 리스크 관리 환경에 적합한 교육체계를 수립하여<br>금융회사 임직원, 대학생 및 일반인들에게 다양한 전문지식을 제공합니다.</p>
         </div>
-        <div class="academy">
+        <div class="academy sc-2">
           <div class="academy__img">
             <img src="images/content/content02.png" alt="academy">
           </div>
@@ -217,14 +221,14 @@
     </section>
     <section id="service">
       <div class="wrap">
-        <div class="description">
+        <div class="description sc-1">
           <h3>
             <span class="small">KCB 서비스</span>
             KCB는 전문적이고 객관적인 서비스를 제공합니다.
           </h3>
           <p>KCB는 전문 역량의 경험과 노하우를 바탕으로 금융회사와 개인을 대상으로 신용정보 서비스, 여신관리 시스템, 신용현황 관리 등<br>신용문화 정착을 위한 전문적이고 객관적인 서비스를 제공합니다.</p>
         </div>
-        <ul class="service__list">
+        <ul class="service__list sc-2">
           <li class="service__list__item">
             <div class="service__description">
               <p class="title">신용위험관리</p>
@@ -253,7 +257,7 @@
         </div>
       </div>
     </section>
-    <section id="recruit">
+    <section id="recruit" class="sc-1">
       <div class="wrap">
         <div class="description">
           <h3>
@@ -373,8 +377,12 @@
         </a>
       </li>
     </ul>
+    <div class="moveup-btn">
+      <a href="#"></a>
+    </div>
   </main>
 
+  <!-- footer -->
   <footer>
     <div class="wrap">
       <img src="images/logo/logo2.png" alt="logo">
