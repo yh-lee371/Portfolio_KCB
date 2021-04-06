@@ -4,16 +4,12 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
-  // gsap 이벤트
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: 'section',
-      start:'top top'
-    }
-  });
+  //aos 이벤트
+  AOS.init() ; 
+  AOS.init({
+    duration: 1000
+  })
 
-  tl.from('.sc-1', {y:100, opacity:0, duration:1})
-    .from('.sc-2', {y:100, opacity:0, duration:1.5,})
 
   // 소메뉴 활성화
   $('.lnb').hide();
@@ -39,12 +35,30 @@ $(document).ready(function(){
     }
   }); 
 
-  $(window).resize(function(){
-    var wt = $(window).width();
-    if(wt < 740 && $('.lnb').is(':hidden')) {//740이상이고 내비가 화면에서 감춰지면
-      $('.lnb').removeAttr('style');//모바일 스타일(css) 제거
+  let wt = $(window).width();
+  gnb();
+
+  if(wt <= 740) {   
+    m_btn();
+  }
+  $(window).resize(function () {
+    let wt = $(window).width();
+    if (wt >= 740) {
+      gnb();
+    } else {
+      m_btn();
     }
   });
+
+  function m_btn() {
+    $('.gnb').off('mouseenter mouseleave');
+  }
+  function gnb() {
+    $('.gnb').on({
+      'mouseenter':function(){ $('.lnb').stop().slideDown(); },
+      'mouseleave':function(){ $('.lnb').stop().slideUp(); }
+    });
+  }
 
   // up btn
   $( window ).scroll( function() {

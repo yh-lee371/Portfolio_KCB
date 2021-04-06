@@ -4,7 +4,6 @@
     common
 ---------------------------------------------------------------------------------------------------------------------*/
 
-/* Universal tags */
 * {
   box-sizing: border-box;
 }
@@ -29,9 +28,58 @@ li {
 
 .wrap {
   width: 100%;
-  max-width: 1260px;
+  max-width: 1460px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.description h3 {
+  font-size: 32px;
+  margin: 0 0 30px;
+}
+.description h3 .small {
+  font-size: 18px;
+  color: #e63d21;
+}
+.description h3 .small:after {
+  content: "";
+  height: 16px;
+  display: block;
+}
+.moreview__btn {
+  width: 144px;
+  height: 40px;
+  margin: 60px auto 0;
+  border-radius: 30px;
+  border: 1px solid #000;
+  line-height: 40px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.moreview__btn span {
+  padding-left: 20px;
+}
+
+.moreview__btn i:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transition: 0.3s;
+  transform: translateY(-50%);
+  background: url(../images/icon/more_btn1.svg) no-repeat center center;
+}
+
+.moreview__btn:hover {
+  border-color: #e63d21;
+  background-color: #e63d21;
+  color: #fff;
+}
+.moreview__btn:hover i:after {
+  background: url(../images/icon/more_btn2.svg) no-repeat center center;
 }
 /*---------------------------------------------------------------------------------------------------------------------
     header
@@ -69,7 +117,6 @@ h1 {
   background: url(../images/logo/logo1.png) no-repeat 100% 100% / contain;
   position: absolute;
   top: 17.5px;
-  text-indent: -9999px;
   cursor: pointer;
 }
 
@@ -181,6 +228,7 @@ h1 {
   top: 0;
   left: 0;
   z-index: 400;
+  display: none;
 }
 
 .search__box .search__bar {
@@ -272,17 +320,7 @@ footer {
 .family-site .drop__site li:first-child a {
   border-top: none;
 }
-.family-site .drop__site a:after {
-  content: "";
-  width: 10px;
-  height: 6px;
-  display: block;
-  position: absolute;
-  top: 20px;
-  right: 26px;
-  background: url(images/icon/toggle_btn.svg) no-repeat;
-  transform: rotate(-90deg);
-}
+
 .family-site .drop__site a img {
   width: 100%;
 }

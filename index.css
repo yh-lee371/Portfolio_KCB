@@ -2,57 +2,9 @@
 /*---------------------------------------------------------------------------------------------------------------------
     common
 ---------------------------------------------------------------------------------------------------------------------*/
+
 section ~ section {
   padding: 150px 80px;
-}
-
-.description h3 {
-  font-size: 32px;
-  margin: 0 0 30px;
-}
-.description h3 .small {
-  font-size: 18px;
-  color: #e63d21;
-}
-.description h3 .small:after {
-  content: "";
-  height: 16px;
-  display: block;
-}
-.moreview__btn {
-  width: 144px;
-  height: 40px;
-  margin: 60px auto 0;
-  border-radius: 30px;
-  border: 1px solid #000;
-  line-height: 40px;
-  position: relative;
-  transition: 0.3s;
-  cursor: pointer;
-}
-.moreview__btn span {
-  padding-left: 20px;
-}
-
-.moreview__btn i:after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transition: 0.3s;
-  transform: translateY(-50%);
-  background: url(images/icon/more_btn1.svg) no-repeat center center;
-}
-
-.moreview__btn:hover {
-  border-color: #e63d21;
-  background-color: #e63d21;
-  color: #fff;
-}
-.moreview__btn:hover i:after {
-  background: url(images/icon/more_btn2.svg) no-repeat center center;
 }
 /*---------------------------------------------------------------------------------------------------------------------
     snb
