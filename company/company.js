@@ -32,6 +32,8 @@ $(document).ready(function(){
       }
   });
 
-
+  $('.family-site').click(function(){
+    $(this).toggleClass('active');
+  })
 
 });
